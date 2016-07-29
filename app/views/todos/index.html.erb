@@ -15,10 +15,10 @@
   <tbody>
     <% @todos.each do |todo| %>
       <tr>
-        <td><%= todo.title %></td>
+        <td><%= link_to todo do %><%= todo.title %><% end %></td>
         <td><%= todo.body %></td>
         <td><%= todo.status %></td>
-        <td><%= link_to 'Show', todo %></td>
+        <td><%= link_to '完了', edit_todo_path(todo) %></td>
         <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
         <td><%= link_to 'Destroy', todo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
