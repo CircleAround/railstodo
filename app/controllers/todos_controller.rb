@@ -1,5 +1,5 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :edit, :update, :status, :destroy]
 
   # GET /todos
   # GET /todos.json
@@ -49,6 +49,12 @@ class TodosController < ApplicationController
         format.json { render json: @todo.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def status
+    @todo.status = params[:status]
+    @todo.save!
+    redirect_to root_url, notice: "「#{@todo.title}」が完了しました"
   end
 
   # DELETE /todos/1
