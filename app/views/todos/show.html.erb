@@ -15,5 +15,11 @@
   <%= @todo.status %>
 </p>
 
+<p>
+  <strong>優先度:</strong>
+  <%= @todo.priority %>
+</p>
+
+
 <%= link_to 'Edit', edit_todo_path(@todo) %> |
 <%= link_to 'Back', todos_path %>
