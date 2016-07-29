@@ -27,7 +27,11 @@
     <%= f.label :priority %><br>
     <%= f.number_field :priority %>
   </div>
-  <% @categories = Category.all %><%= select :todo, :category_id, @categories.map{|t| [t.name, t.id]} %>
+  <div class="field">
+    <%= f.label :category %><br>
+    <% @categories = Category.all %>
+    <%= f.select :category_id, @categories.map{|t| [t.name, t.id]}, include_blank: true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

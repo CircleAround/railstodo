@@ -208,3 +208,8 @@ ja:
         body: 本文
         status: 状態
         priority: 優先度
+        category: カテゴリ
+      category:
+        name: 名前
+        description: 詳細
+
