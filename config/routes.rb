@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   root 'todos#index'
 
   resources :todos do
