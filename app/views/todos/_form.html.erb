@@ -27,6 +27,7 @@
     <%= f.label :priority %><br>
     <%= f.number_field :priority %>
   </div>
+  <% @categories = Category.all %><%= select :page, :name, @categories.map{|t| [t.name, t.id]} %>
   <div class="actions">
     <%= f.submit %>
   </div>
