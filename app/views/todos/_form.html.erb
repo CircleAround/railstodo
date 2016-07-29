@@ -1,7 +1,7 @@
 <%= form_for(@todo) do |f| %>
   <% if @todo.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+      <h2><%= pluralize(@todo.errors.count, "個") %> エラーがあります:</h2>
 
       <ul>
       <% @todo.errors.full_messages.each do |message| %>
