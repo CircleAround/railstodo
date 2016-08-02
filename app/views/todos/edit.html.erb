@@ -1,6 +1,8 @@
-<h1>Editing Todo</h1>
+<h1>Todoの編集</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @todo %> |
-<%= link_to 'Back', todos_path %>
+<div class="navigations">
+  <%= link_to '見る', @todo %> |
+  <%= link_to '戻る', todos_path %>
+</div>
