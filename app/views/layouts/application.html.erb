@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>俺のToDoアプリケーション</h1>
+<h1><%= link_to '俺のToDoアプリケーション', root_path %></h1>
 
 <div id="wrapper">
   <header>
     <%= link_to '新しいTodo', new_todo_path %>
+    <%= link_to '新しいカテゴリ', new_category_path %>
   </header>
 
   <%= yield %>
