@@ -200,7 +200,13 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %z"
       short: "%y/%m/%d %H:%M"
     pm: 午後
-
+  views:
+    pagination:
+      first: "&lt;&lt;"
+      last: "&gt;&gt;"
+      previous: "&lt;"
+      next: "&gt;"
+      truncate: "&hellip;"
   activerecord:
     attributes:
       todo:
