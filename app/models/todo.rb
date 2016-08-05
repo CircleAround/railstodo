@@ -1,4 +1,6 @@
 class Todo < ActiveRecord::Base
+  belongs_to :category
+
   validates :title, presence: true
   validates :status, presence: true
   validates :priority, presence: true,
