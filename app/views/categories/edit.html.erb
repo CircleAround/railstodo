@@ -1,6 +1,8 @@
-<h1>Editing Category</h1>
+<h1>カテゴリを編集する</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @category %> |
-<%= link_to 'Back', categories_path %>
+<div class="navigations">
+  <%= link_to '見る', @category %> |
+  <%= link_to '戻る', categories_path %>
+</div>

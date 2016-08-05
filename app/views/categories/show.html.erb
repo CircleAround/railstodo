@@ -1,17 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="panel">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
+  <p>
+    <strong>名前:</strong>
+    <%= @category.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @category.description %>
-</p>
+  <p>
+    <strong>詳細:</strong>
+    <%= @category.description %>
+  </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+  <%= link_to '編集', edit_category_path(@category) %> |
+  <%= link_to '戻る', categories_path %>
 
-<h2>Todo一覧</h2>
-<%= render partial: 'todos/todos_table', locals: { todos: @category.todos } %>
+  <h2>Todo一覧</h2>
+  <%= render partial: 'todos/todos_table', locals: { todos: @todos } %>
+</div>
