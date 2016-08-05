@@ -4,7 +4,7 @@ class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
   def index
-    @todos = Todo.where(status: 0)
+    @todos = Todo.where(status: 0).order('priority DESC')
   end
 
   # GET /todos/1
